@@ -1,7 +1,3 @@
-# import webscrape
-# import requests
-# from bs4 import BeautifulSoup
-# import pandas as pd
 import vsDefense
 
 def main():
@@ -9,8 +5,9 @@ def main():
     # print(html)
 
     results = vsDefense.QBvsDefense()
-
+    results2 = vsDefense.RBvsDefense()
     print(results)
+    print(results2)
 
 if __name__ == "__main__":
     main()
