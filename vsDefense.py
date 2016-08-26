@@ -78,8 +78,40 @@ def QBvsDefense ():
         # and append it to postTestScore variable
         pRating.append(column_8)
 
+        # Create a variable of the string inside 9th <td> tag pair,
+        column_9 = col[8].string.strip()
+        # and append it to postTestScore variable
+        rAtt.append(column_9)
+
+        # Create a variable of the string inside 10th <td> tag pair,
+        column_10 = col[9].string.strip()
+        # and append it to postTestScore variable
+        rYd.append(column_10)
+
+        # Create a variable of the string inside 11th <td> tag pair,
+        column_11 = col[10].string.strip()
+        # and append it to postTestScore variable
+        rAvg.append(column_11)
+
+        # Create a variable of the string inside 12th <td> tag pair,
+        column_12 = col[11].string.strip()
+        # and append it to postTestScore variable
+        rTd.append(column_12)
+
+        # Create a variable of the string inside 13th <td> tag pair,
+        column_13 = col[12].string.strip()
+        # and append it to postTestScore variable
+        rFl.append(column_13)
+
+        # Create a variable of the string inside 14th <td> tag pair,
+        column_14 = col[13].string.strip()
+        # and append it to postTestScore variable
+        fpts.append(column_14)
+
     # Create a variable of the value of the columns
-    columns = {'Rank': rank, 'Team': team, 'Att': pAtt, 'Cmp': pCmp, 'YD': pYd, 'TD': pTd, 'INT': pInt, 'QBR': pRating}
+    columns = {'Rank': rank, 'Team': team, 'PAtt': pAtt, 'PCmp': pCmp, 'PYD': pYd, 'PTD': pTd, 'INT': pInt,
+               'QBR': pRating, 'RAtt': rAtt, 'RYD': rYd, 'RAvg':rAvg, 'RTD':rTd, 'RFmbl': rFl, 'FPTS': fpts}
+
     # Create a dataframe from the columns variable
     df = pd.DataFrame(columns)
 
