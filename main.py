@@ -65,17 +65,17 @@ def main():
         # and append it to postTestScore variable
         pYd.append(column_5)
 
-        # Create a variable of the string inside 5th <td> tag pair,
+        # Create a variable of the string inside 6th <td> tag pair,
         column_6 = col[5].string.strip()
         # and append it to postTestScore variable
         pTd.append(column_6)
 
-        # Create a variable of the string inside 5th <td> tag pair,
+        # Create a variable of the string inside 7th <td> tag pair,
         column_7 = col[6].string.strip()
         # and append it to postTestScore variable
         pInt.append(column_7)
 
-        # Create a variable of the string inside 5th <td> tag pair,
+        # Create a variable of the string inside 8th <td> tag pair,
         column_8 = col[7].string.strip()
         # and append it to postTestScore variable
         pRating.append(column_8)
@@ -89,9 +89,7 @@ def main():
 
     print(target)
 
-    print("===================")
-
-    print(df)
+    #print(df)
 
 if __name__ == "__main__":
     main()
