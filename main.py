@@ -9,7 +9,7 @@ def main():
 
     # Create a variable with the URL to this tutorial
     url = 'http://nbviewer.ipython.org/github/chrisalbon/code_py/blob/master/beautiful_soup_scrape_table.ipynb'
-
+    #url = 'http://www.cbssports.com/fantasy/football/stats/posvsdef/'
     # Scrape the HTML at the url
     r = requests.get(url)
 
@@ -25,7 +25,7 @@ def main():
 
     # Create an object of the first object that is class=dataframe
     table = soup.find(class_='dataframe')
-
+    #table = soup.find(class_='data compact')
     # Find all the <tr> tag pairs, skip the first one, then for each.
     for row in table.find_all('tr')[1:]:
         # Create a variable of all the <td> tag pairs in each <tr> tag pair,
@@ -59,10 +59,8 @@ def main():
     # Create a variable of the value of the columns
     columns = {'first_name': first_name, 'last_name': last_name, 'age': age, 'preTestScore': preTestScore,
                'postTestScore': postTestScore}
-
     # Create a dataframe from the columns variable
     df = pd.DataFrame(columns)
-
     print(df)
 
 if __name__ == "__main__":
